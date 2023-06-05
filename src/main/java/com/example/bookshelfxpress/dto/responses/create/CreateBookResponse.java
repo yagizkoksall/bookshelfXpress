@@ -1,6 +1,7 @@
 package com.example.bookshelfxpress.dto.responses.create;
 
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class CreateBookResponse {
@@ -11,6 +12,7 @@ public class CreateBookResponse {
     private int publicationYear;
     private int pageCount;
     private boolean available;
+    private LocalDateTime createdAt;
 
     public UUID getId() {
         return id;
@@ -66,5 +68,13 @@ public class CreateBookResponse {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }
